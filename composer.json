@@ -14,5 +14,8 @@
         "psr-4": {
             "Monomelodies\\Hangman\\": "./src"
         }
+    },
+    "require-dev": {
+        "toast/unit": "^2.1"
     }
 }
