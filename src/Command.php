@@ -13,12 +13,38 @@ class Command
     /** @var int */
     private $returnVar;
 
+    /**
+     * @param string $command
+     * @param int $returnVar
+     * @return void
+     */
     public function __construct(string $command, int $returnVar)
     {
         $this->command = $command;
         $this->returnVar = $returnVar;
     }
 
+    /**
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->command;
+    }
+
+    /**
+     * @return int
+     */
+    public function getReturnCode() : int
+    {
+        return $this->returnVar;
+    }
+
+    /**
+     * Formatted result: COMMAND (RETURNVAR)
+     *
+     * @return string
+     */
     public function __toString() : string
     {
         return "{$this->command} ({$this->returnVar})";
